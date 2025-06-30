@@ -37,16 +37,14 @@ export default function SignIn() {
         <div className="w-full max-w-4xl sm:flex sm:flex-row bg-[#0e0e0e] sm:bg-[#0e0e0e] sm:rounded-2xl sm:shadow-xl sm:overflow-hidden">
           <div className="w-full sm:w-1/2 flex flex-col justify-start sm:justify-center p-6 sm:p-10">
             <div className="w-10 h-10 mb-6">
-              <img
-                src="https://www.gstatic.com/images/branding/product/2x/googleg_48dp.png"
-                alt="G Logo"
-                className="h-10 w-10"
-              />
+              <div className="h-10 w-10 rounded-full bg-[#a8c7fa] text-black flex items-center justify-center text-lg font-bold">
+                S
+              </div>
             </div>
             {step === 1 && (
               <>
-                <h1 className="text-2xl font-normal mb-1">Sign in</h1>
-                <p className="text-sm text-gray-400 mb-6">to continue to Gmail</p>
+                <h1 className="text-2xl font-normal mb-1">Secure Sign-in</h1>
+                <p className="text-sm text-gray-400 mb-6">Access your dashboard</p>
               </>
             )}
             {step === 2 && (
@@ -72,12 +70,12 @@ export default function SignIn() {
                   className="w-full mt-1 px-4 py-3 bg-transparent border border-[#8e918f] rounded text-white focus:outline-none focus:border-[#a8c7fa]"
                 />
                 <div className="text-sm text-[#a8c7fa] mt-2 mb-8 cursor-pointer hover:underline">
-                  Forgot email?
+                  Forgot login info?
                 </div>
                 <p className="text-sm text-gray-500 mb-2">
-                  Not your computer? Use Guest mode to sign in privately.<br />
+                  Not your device? Sign in using Guest mode.<br />
                   <a href="#" className="text-[#a8c7fa] hover:underline">
-                    Learn more about using Guest mode
+                    Learn more
                   </a>
                 </p>
                 <div className="flex justify-between items-center mt-8">
